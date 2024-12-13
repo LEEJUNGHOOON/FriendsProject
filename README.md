@@ -14,7 +14,7 @@
 
 - **Java**: 서버 사이드 로직
 - **JSP**: 동적인 HTML 페이지를 생성
-- **OracleDB**: 데이터베이스
+- **OracleDB**: 데이터베이스
 - **jQuery**: JavaScript 라이브러리, Ajax 요청 처리
 - **CSS**: 기본적인 스타일링 및 애니메이션 효과
   라이브러리
