@@ -114,8 +114,11 @@ $("#insert").on("click", function() {
 
 ### 동영상 설명
 
-[메인 페이지 조회 동영상 보기](https://www.youtube.com/watch?v=example)  
-(위 링크는 동영상의 URL로 바꾸세요)
+
+
+https://github.com/user-attachments/assets/62977d8a-e1a3-4188-a000-a5bd379e8ca4
+
+
 
 ### 화면 구성
 
@@ -131,8 +134,14 @@ $("#insert").on("click", function() {
 
 ### 동영상 설명
 
-[메인 페이지 조회 동영상 보기](https://www.youtube.com/watch?v=example)  
-(위 링크는 동영상의 URL로 바꾸세요)
+#### 삽입1
+
+
+https://github.com/user-attachments/assets/0a1811a8-e00d-4305-9e8b-8b155dbbc6c5
+
+
+#### 삽입2
+
 
 ### 화면 구성
 
