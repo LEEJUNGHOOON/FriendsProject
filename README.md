@@ -7,7 +7,7 @@
 |Name|Part|
 |---|---|
 |김병건|Front|
-|노인욱|Front|
+|허진우|Front|
 |이정훈|Back,Crud|
 
 
