@@ -116,7 +116,8 @@ $("#insert").on("click", function() {
 
 
 
-https://github.com/user-attachments/assets/62977d8a-e1a3-4188-a000-a5bd379e8ca4
+https://github.com/user-attachments/assets/29b47986-7edd-4c56-9295-13ca8e233db9
+
 
 
 
@@ -143,11 +144,6 @@ https://github.com/user-attachments/assets/0a1811a8-e00d-4305-9e8b-8b155dbbc6c5
 #### 삽입2
 
 
-### 화면 구성
-
-- 친구 목록 테이블
-- 친구 추가 버튼
-- 친구 수정 및 삭제 버튼
 
 ---
 
