@@ -56,3 +56,50 @@
         e.printStackTrace();
     }
 %>
+```
+
+#### JavaScript 코드 (친구 정보 추가)
+
+```javascript
+$("#insert").on("click", function() {
+    // 전화번호와 이메일 검사를 완료했는지 확인
+    if (!isPhoneChecked || !isEmailChecked) {
+        alert("휴대폰과 이메일 검사를 완료해주세요.");
+        return;
+    }
+
+    // 입력 값 가져오기
+    const name = $("#name").val();
+    const phone = $("#phone").val();
+    const email = $("#email").val();
+    const memo = $("#memo").val();
+
+    // 모든 입력 값이 채워졌는지 확인
+    if (!name || !phone || !email || !memo) {
+        alert("모든 항목을 입력해주세요.");
+        return;
+    }
+
+    // 서버에 전송할 데이터
+    const params = { name: name, phone: phone, email: email, memo: memo };
+
+    // AJAX 요청
+    $.ajax({
+        url: "/friends/insertFriendsTable.jsp",  // 요청을 보낼 URL
+        type: "post",  // HTTP 메서드 (POST)
+        data: params,  // 서버로 전송할 데이터
+        dataType: "json",  // 응답 데이터 형식
+        success: function(result) {
+            if (result) {
+                alert("신규 등록 성공!");
+                refreshTable();  // 테이블 갱신 함수 호출
+            } else {
+                alert("신규 등록 실패.");
+            }
+        },
+        error: function(XHR, status, error) {
+            alert("신규 등록 중 오류 발생.");
+        }
+    });
+});
+```
