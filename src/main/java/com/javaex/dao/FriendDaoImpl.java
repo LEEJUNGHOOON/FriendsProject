@@ -6,6 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//6조 김병건,허진우,이정훈
 public class FriendDaoImpl implements FriendDao {
     private Connection getConnection() throws SQLException {
         Connection conn = null;

@@ -7,6 +7,7 @@
 <%@ page import="main.java.com.javaex.vo.FriendVo" %>
 <%@ page import="java.util.List" %>
 
+<%--6조 김병건,허진우,이정훈--%>
 <!DOCTYPE html>
 <html>
 <head>
