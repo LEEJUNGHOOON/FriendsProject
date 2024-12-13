@@ -11,6 +11,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
@@ -24,7 +26,7 @@
         top: 0;
         left: 0;
         z-index: -1; /* 배경이 콘텐츠 뒤에 위치하도록 */
-        background-color: #04005E /* 어두운 배경 */
+        background-color: #101C29 /* 어두운 배경 */
     }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -36,7 +38,12 @@ body {
 }
 #apptitle{
     text-align: center;
-    color: lightyellow;
+    color: #F5F0A1;
+    text-shadow:
+            -1px -1px 0 #000, /* 왼쪽 위 */
+            1px -1px 0 #000, /* 오른쪽 위 */
+            -1px  1px 0 #000, /* 왼쪽 아래 */
+            1px  1px 0 #000; /* 오른쪽 아래 */
 }
 form, table {
     width: 100%;
@@ -44,9 +51,11 @@ form, table {
     margin: 20px 0;
     border: 1px solid #ddd;
     border-radius: 8px;
+    border-color: #42ECF1;
     overflow: hidden;
     padding: 15px;
-    background: #f9f9f9;
+    background: #F5F0A1;
+    opacity:0.85;
 }
 
 form div {
@@ -125,7 +134,9 @@ button:hover {
     text-align: left;
 }
 
-.tbl-ex tr.even { background-color: #f9f9f9; }
+.tbl-ex tr.even { background-color: #fafaf5;}
+    .tbl-ex tr.odd { background-color: #eaeae5;}
+
 .tbl-ex tr:hover { background-color: #e9e9e9; cursor: pointer; }
 </style>
 
@@ -153,6 +164,8 @@ button:hover {
 $(function() {
     let isPhoneChecked = false; // phone_check 여부
     let isEmailChecked = false; // email_check 여부
+
+    AOS.init();
 
     refreshTable();
 
@@ -383,12 +396,13 @@ $(function() {
 });
 </script>
 </head>
-<body>
+<body >
 <div id="particles-js"></div>
-<div id="apptitle">
+<div data-aos="zoom-in" data-aos-duration="1000">
+<div id="apptitle" data-aos="zoom-in">
     <h1>Friends App</h1>
 </div>
-<form name="insertForm" id="insertForm" method="post">
+<form name="insertForm" id="insertForm" method="post" >
     <div>
         <label for="name">이름</label>
         <input type="text" name="name" id="name" placeholder="이름을 입력하세요">
@@ -420,7 +434,7 @@ $(function() {
     </div>
 </form>
 
-<table id="tbl-ex" class="tbl-ex">
+<table id="tbl-ex" class="tbl-ex" >
     <thead>
         <tr>
         	<th><input type="checkbox" id="selectAll"></th>
@@ -434,6 +448,7 @@ $(function() {
 
     </tbody>
 </table>
+</div>
 <script>
     particlesJS("particles-js", {
         "particles": {
@@ -445,7 +460,7 @@ $(function() {
                 }
             },
             "color": {
-                "value": "#ffffff"
+                "value": "#F5F0A1"
             },
             "shape": {
                 "type": "circle",
@@ -480,8 +495,8 @@ $(function() {
             "line_linked": {
                 "enable": true,
                 "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.4,
+                "color": "#F5F0A1",
+                "opacity": 0.6,
                 "width": 1
             },
             "move": {
